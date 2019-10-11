@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author szkola
- */
 public class TestCircleWithPrivateDataField {
-    /** Main method */ 
+    
+    /** Main method of course it is! */ 
     public static void main(String[] args) {
         
 // Create a Circle with radius 5.0
