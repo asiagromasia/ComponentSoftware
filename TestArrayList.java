@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author szkola
- */
 import java.util.ArrayList;
+
 public class TestArrayList {
     public static void main(String[] args) {
+        
         //create an arrayList to store cities
         ArrayList<String> cityList= new ArrayList<>();
+        
         //add some cities
         cityList.add("London");
         cityList.add("Denver");
