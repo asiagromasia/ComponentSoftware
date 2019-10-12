@@ -8,8 +8,6 @@
  *
  * @author szkola
  */
-
-// Define the circle class with two constructors and with STATIC MEMBERS
 public class Circle {  
     
     double radius;  //data field
@@ -48,4 +46,5 @@ public class Circle {
     }
     
 }
+
 
