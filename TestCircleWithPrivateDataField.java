@@ -1,3 +1,8 @@
+/* public - The class, data, or method is visible to any class in any package
+   private - The data or methods can be accessed only by the declaring class
+   - by default, the class, variable, or method can be accessed by any class in the same package */
+
+
 public class TestCircleWithPrivateDataField {
     
     public static void main(String[] args) {
