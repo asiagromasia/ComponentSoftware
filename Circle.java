@@ -3,26 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.testcircle;
 
 /**
  *
  * @author szkola
  */
 
-// Define the circle class with two constructors
-public class Circle {
+// Define the circle class with two constructors and with STATIC MEMBERS
+public class Circle {  
     
     double radius;  //data field
     
-    /** Construct a circle with radius 1 */
+    /* The number of the objects created */
+    static int numberOfObjects = 0;
+    
+    /* Construct a circle with radius 1 */
     public Circle(){
-        radius=1;
+        radius=1.0;
+        numberOfObjects++;
     }
     
-    /** Construct a circle with a specified radius */
+    /* Construct a circle with a specified radius */
     public Circle(double newRadius){ 
         radius=newRadius; 
+        numberOfObjects++;
+    }
+    /** Return numberOfObjects */
+    static int getNumberOfObjects() {
+        return numberOfObjects;
     }
     
     /** Return the area of this circle */
@@ -40,3 +48,4 @@ public class Circle {
     }
     
 }
+
