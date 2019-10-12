@@ -1,7 +1,7 @@
 /* ArrayList - a collection storing an ordered sequence of elements,
              - each element is accessible by a 0-based index
              - a list has a size (number of elements that have been added)
-             - elements can be added to the front, back, or elsewhere */
+             - elements can be added to the front, back, or elsewhere    */
 
 import java.util.ArrayList;
 
