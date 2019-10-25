@@ -1,0 +1,69 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Joanna Gromadzka
+ * AD 300 - 5204
+ * Assignment 1
+ * Remove duplicates from ArrayList
+Write a method that removes the duplicate elements from an array list of integers using the following header: public static void removeDuplicate(ArrayList<Integer> list)
+    use the contains method and the clear method inside the removeDuplicate method (hint: to create another array list in this method)
+Write a test program that prompts the user to enter 10 integers to a list and displays the distinct integers in their input order and separated by exactly one space.
+OUTPUT: Here is a sample run: Enter ten integers: 34 34 5 6 5 33 24 5 4 6
+    The distinct integers are 34 5 6 33 24 4
+    Sorted in ascending [4, 5, 6, 24, 33, 34]
+    Maximum element in a list 34
+    Minimal element in a list 4
+    Random shuffle for the elements in the list [33, 24, 5, 6, 34, 4]
+ */
+public class DuplicateRemovalInt {
+    public static void main(String[] args) {
+       //create object of ArrrayList of integers type
+        ArrayList<Integer> list= new ArrayList<>();
+       //create console and allows reading input
+        Scanner console = new Scanner(System.in); 
+        //obtains integers
+        System.out.print("Enter ten integers: ");
+            int nr;                             
+            do {  
+                 nr = console.nextInt(); //read value from the input
+                 list.add(nr);
+            } while (list.size() <= 10);
+             //printing integers in 1 line
+             System.out.print("Your entered: ");
+              for(int i=0; i<list.size();i++)
+                System.out.print(list.get(i)+ " ");
+             //calling method
+             removeDuplicate(list);
+             
+        }
+     
+    public static void removeDuplicate(ArrayList<Integer> list){
+        //create new array list to store int without duplicates
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        //loop through entered list 
+        for (int i = list.get(0); i <= 10; i++){
+            //check if new arraylist already have the int if not add it
+            if(!list2.contains(list.get(i)))
+                 list2.add(list.get(i));      
+        } 
+        System.out.println(); 
+        //empty first arraylist
+        list.clear();
+        System.out.print("The distinct integers are ");
+         for(int i2=0; i2<list2.size();i2++)
+            System.out.print(list2.get(i2)+ " ");
+            System.out.println();
+            
+        //using methods from Collections
+        java.util.Collections.sort(list2);
+        System.out.println("Sorted in ascending " + list2);
+        System.out.println("Maximum element in a list " + (Collections.max(list2)));
+        System.out.println("Minimal element in a list " + (Collections.min(list2)));
+        Collections.shuffle(list2);
+        System.out.println("Random shuffle for the elements in the list "  +  list2);
+           
+    }   
+}
